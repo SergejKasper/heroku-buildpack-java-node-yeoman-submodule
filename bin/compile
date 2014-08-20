@@ -281,6 +281,8 @@ if [ "true" == $KEEP_M2_CACHE ]; then
   done
 fi
 
+rm -rf "$build_dir/.m2"
+
 PROFILE_PATH="$BUILD_DIR/.profile.d/java.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="/app/.jdk/bin:$PATH"' >> $PROFILE_PATH
